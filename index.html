@@ -1,0 +1,230 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Lab 4 - Group 47</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="icon" href="images/favicon.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <h1>Welcome to Nice Scissors</h1>
+        <p>We'll take care of your hair!</p>
+    </div>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <div class="row p-3">
+        <div class="col-sm-3 pl-5">Service</div>
+        <div class="col-sm-3">Calendar</div>
+        <div class="col-sm-3">Payment</div>
+        <div class="col-sm-3">Where to find us</div>
+    </div>
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="container-md p-3 my-3 border bg-light text-success">
+        <h3>Let us tell you about our expertise</h3>
+        <p>We can <mark>cut hair</mark></p>
+        <p class="text-center" >Align wheels</p>
+        <p class="text-uppercase">Write in uppercase</p>
+        <p class="text-center text-uppercase" >centered and uppercase</p>
+    </div>
+
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container">
+        <h2>Service description</h2>
+        <p>Here is a list of services offered</p>            
+        <table class="table table-primary table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Haircut</td>
+                <td>The basic barebones haircut, our best seller! Get a haircut from one of our trusted professionals that will get you back to looking your best!</td>
+                <td>$25.00</td>
+            </tr>
+            <tr>
+                <td>Wash and Dry</td>
+                <td>Our famous in house shampoo and drying service!</td>
+                <td>$35.00</td>
+            </tr>
+            <tr>
+                <td>Coloring</td>
+                <td>Looking for a new look? Let our in-house coloring experts help you out with your new style!</td>
+                <td>$50.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+    <!-- Modals are useful for additional information or questions -->
+    <!-- Here the modal is used for a little survey -->
+    <div class="container">
+    <!-- First Modal -->
+        <div class="modal fade" id="bookingModal" role="dialog">
+            <div class="modal-dialog">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <h2>Book a Service!</h2>
+                            <p>Choose from the following:</p>
+                            <form>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Haircut</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Wash and Dry</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Coloring</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#secondModal">Next</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Second Modal -->
+    <div class="modal fade" id="secondModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4>Select Date and Time</h4>
+                    <div class="form-group">
+                        <label for="dateInput">Date:</label>
+                        <input type="date" class="form-control" id="dateInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeInput">Time:</label>
+                        <input type="time" class="form-control" id="timeInput">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#thirdModal">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Modal -->
+    <div class="modal fade" id="thirdModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4>This is the third modal. Please enter your information:</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container p-3">
+        <h2>Meet our hairdressers</h2>
+        <div class="card-columns">
+            <div class="card bg-warning" style="width: 200px;">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Jules Image">
+                <div class="card-body">
+                    <h4 class="card-title">Jules</h4>
+                    <p class="card-text">With 10 years of hair-cutting expertise.</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card bg-danger" style="width: 200px;">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Jules Image">
+                <div class="card-body">
+                    <h4 class="card-title">Jules - Curly Hair Specialist</h4>
+                    <p class="card-text">Providing expert care for curly hair.</p>
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                    <div id="profile" class="collapse p-3">
+                        <p>Jules has been cutting hair for 10 years...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        123 Main Street, Ottawa ON, K2X 8G4
+    </footer>
+
+</body>
+</html>
