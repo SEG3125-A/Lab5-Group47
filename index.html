@@ -19,48 +19,61 @@
     <link rel="icon" href="images/favicon.jpg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'> 
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
 
-<body>
+<body class="bg-white">
+
+    <!-- Proper navbar element -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <!-- Scissors Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16">
+                <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+            </svg>
+            Clips N' Snips
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Experts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
 
     <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
     <!-- Should show the name of your company with an image or logo -->
     <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
     <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
     <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h1>Welcome to Nice Scissors</h1>
-        <p>We'll take care of your hair!</p>
+    <div class="container-md p-3 my-3 bg-white text-dark hero">
+        <div class="page-title">
+           <h1 class="text-center">Clips N' Snips</h1>
+            <p class="text-center">Impressively average haircuts</p> 
+        </div>
+        <button type="button" class="btn btn-dark">Book Yours Today! </button>
     </div>
-
-    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
-    <!-- It can be useful for placement of information -->
-    <div class="row p-3">
-        <div class="col-sm-3 pl-5">Service</div>
-        <div class="col-sm-3">Calendar</div>
-        <div class="col-sm-3">Payment</div>
-        <div class="col-sm-3">Where to find us</div>
-    </div>
-
-    <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
-        <p class="text-center" >Align wheels</p>
-        <p class="text-uppercase">Write in uppercase</p>
-        <p class="text-center text-uppercase" >centered and uppercase</p>
-    </div>
-
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
     <div class="container">
-        <h2>Service description</h2>
+        <h2>Services</h2>
         <p>Here is a list of services offered</p>            
         <table class="table table-primary table-hover">
             <thead>
