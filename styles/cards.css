@@ -5,7 +5,6 @@
     transition: transform 0.3s ease, filter 0.3s ease;
     height: auto;
     width: auto;
-    
 }
 
 .col .card {
@@ -32,21 +31,28 @@
     filter: grayscale(0%);
 }
 
+.card:hover .title-container {
+    background-color: rgba(0, 0, 0, 1);
+}
+
 .card-body {
     text-align: center;
 }
 
 .title-container{
-    width: 150px;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 5px;
+    top: 50%;
+    left: 50%;
+    width: 200px;
     height: 2rem;
-    background: #F1DABF;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(-50%);
 }
 
 .card-title {
     color: white;
-    margin-bottom: 0.1rem;
-    top: 50%;
-    left: 0%;
 }
 
 .card-text {
