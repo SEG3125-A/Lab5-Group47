@@ -1,0 +1,17 @@
+.experts{
+    margin-bottom: 5rem;
+}
+
+.experts-title{
+    display:flex;
+    text-align: justify;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.rotated-header{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 3.5rem;
+    color: white;
+}

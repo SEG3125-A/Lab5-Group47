@@ -1,0 +1,15 @@
+/* hero.css */
+
+.hero {
+  /* Full viewport height, less the navbar, footer, and margins */
+  height: calc(100vh - 100px - 2rem);
+  max-height: 880px;
+  gap: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & p {
+      font-size: 2rem;
+  }
+}

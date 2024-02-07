@@ -1,0 +1,10 @@
+/* tables.css */
+
+.table .table-primary .table-bordered .table-hover .services-table {
+    border: 2px solid black;
+}
+
+.services-table .service-icon{
+    vertical-align: middle;
+    text-align: center;
+}

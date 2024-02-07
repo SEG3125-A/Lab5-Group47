@@ -22,8 +22,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'> 
 
+    <!-- FontAwesome link -->
+    <script src="https://kit.fontawesome.com/655497918f.js" crossorigin="anonymous"></script>
+
     <!-- Your own additional style sheet -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/tables.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/experts.css">
+    <link rel="stylesheet" href="styles/typography.css">
+
 </head>
 
 
@@ -62,43 +74,58 @@
     <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
     <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
     <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 bg-white text-dark hero">
+    <div class="hero container-md p-3 my-3 bg-white text-dark">
         <div class="page-title">
            <h1 class="text-center">Clips N' Snips</h1>
             <p class="text-center">Impressively average haircuts</p> 
         </div>
-        <button type="button" class="btn btn-dark">Book Yours Today! </button>
+        <button type="button" class="btn hero-btn">Book Yours Today! </button>
     </div>
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
-        <h2>Services</h2>
-        <p>Here is a list of services offered</p>            
-        <table class="table table-primary table-hover">
-            <thead>
+    <div class="container" style="margin-bottom: 10rem;">
+        <h2 class="section-header">Unlock your style!</h2>
+        <table class="table table-bordered table-hover services-table">
+            <thead class="thead-dark">
             <tr>
+                <th><!--Icon--></th>
                 <th>Service</th>
                 <th>Description</th>
                 <th>Price</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Haircut</td>
-                <td>The basic barebones haircut, our best seller! Get a haircut from one of our trusted professionals that will get you back to looking your best!</td>
-                <td>$25.00</td>
-            </tr>
-            <tr>
-                <td>Wash and Dry</td>
-                <td>Our famous in house shampoo and drying service!</td>
-                <td>$35.00</td>
-            </tr>
-            <tr>
-                <td>Coloring</td>
-                <td>Looking for a new look? Let our in-house coloring experts help you out with your new style!</td>
-                <td>$50.00</td>
-            </tr>
+                <tr>
+                    <td class="service-icon"><i class="fa-solid fa-scissors"></i></td>
+                    <td>Haircut</td>
+                    <td>The basic barebones haircut, our best seller!</td>
+                    <td>$25.00</td>
+                </tr>
+                <tr>
+                    <td class="service-icon"><i class="fa-solid fa-paint-brush"></i></td>
+                    <td>Color & Highlights</td>
+                    <td>Add dimension to your hair with our coloring and highlighting services.</td>
+                    <td>Starting from $50.00</td>
+                </tr>
+                <tr>
+                    <td class="service-icon"><i class="fa-solid fa-flask"></i></td>
+                    <td>Hair Treatments</td>
+                    <td>Nourish your locks with our luxury hair treatments, leaving your hair silky smooth. </td>
+                    <td>Starting from $35.00</td>
+                </tr>
+                <tr>
+                    <td class="service-icon"><i class="fa-solid fa-link"></i></td>
+                    <td>Extensions & Weaves</td>
+                    <td>Transform your look with our premium extensions and weaves, adding length and volume for a stunning style. Prices vary.</td>
+                    <td>Starting from $100.00</td>
+                </tr>
+                <tr>
+                    <td class="service-icon" style="transform:rotate(15deg)"><i class="fa-solid fa-wine-glass"></i></td>
+                    <td>Special Occasion Styling</td>
+                    <td>Elevate your event with our expert styling for special occasions, ensuring you shine on every occasion. Prices vary.</td>
+                    <td>Starting from $60.00</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -175,7 +202,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <h4>This is the third modal. Please enter your information:</h4>
+                    <h4>Please enter your information:</h4>
                     <form>
                         <div class="form-group">
                             <label for="firstName">First Name:</label>
@@ -206,32 +233,140 @@
     <!-- Card columns allows multiple cards next to each other -->
     <!-- The first card's button doesn't go anywhere, it could be a modal --> 
     <!-- My second card limits the information seen and uses collapsible to show more -->
-    <div class="container p-3">
-        <h2>Meet our hairdressers</h2>
-        <div class="card-columns">
-            <div class="card bg-warning" style="width: 200px;">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Jules Image">
-                <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">With 10 years of hair-cutting expertise.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
-                </div>
+    <div class="experts container p-3 ">
+        <div class="row">
+            <div class="col-sm-1 bg-dark experts-title">
+                <h2 class="rotated-header">Meet our Experts </h2>
             </div>
-
-            <div class="card bg-danger" style="width: 200px;">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Jules Image">
-                <div class="card-body">
-                    <h4 class="card-title">Jules - Curly Hair Specialist</h4>
-                    <p class="card-text">Providing expert care for curly hair.</p>
-                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
-                    <div id="profile" class="collapse p-3">
-                        <p>Jules has been cutting hair for 10 years...</p>
+            <div class="col">
+                <div class="row">
+                    <div class="col card">
+                        <img class="card-img-top" src="images/Jules.png" alt="Jules Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Jules</h4>
+                            <div class="icon-row">
+                                <div class="icon">
+                                    <i class="fa-solid fa-scissors"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-paint-brush"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-wine-glass"></i>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">See Profile</a>
+                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="col card">
+                        <img class="card-img-top" src="images/Keith.png" alt="Keith Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Keith</h4>
+                            <div class="icon-row">
+                                <div class="icon">
+                                    <i class="fa-solid fa-paintbrush"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-flask"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-link"></i>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">See Profile</a>
+                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="col card">
+                        <img class="card-img-top" src="images/Luther.png" alt="Luther Image">
+                    <div class="card-body">
+                        <h4 class="card-title">Luther</h4>
+                        <div class="icon-row">
+                            <div class="icon">
+                                <i class="fa-solid fa-scissors"></i>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-flask"></i>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-wine-glass"></i>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col card">
+                        <img class="card-img-top" src="images/Vanessa.png" alt="Vanessa Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Vanessa</h4>
+                            <div class="icon-row">
+                                <div class="icon">
+                                    <i class="fa-solid fa-flask"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-paintbrush"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-wine-glass"></i>
+                                </div>
+                            </div>
+                            <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <div id="profile" class="collapse p-3">
+                                <p>Jules has been cutting hair for 10 years...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col card">
+                        <img class="card-img-top" src="images/Pierre.png" alt="Pierre Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Pierre</h4>
+                            <div class="icon-row">
+                                <div class="icon">
+                                    <i class="fa-solid fa-link"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-scissors"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-wine-glass"></i>
+                                </div>
+                            </div>
+                            <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <div id="profile" class="collapse p-3">
+                                <p>Jules has been cutting hair for 10 years...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col card">
+                        <img class="card-img-top" src="images/Arianna.png" alt="Arianna Image">
+                        <div class="card-body">
+                            <h4 class="card-title">Arianna</h4>
+                            <div class="icon-row">
+                                <div class="icon">
+                                    <i class="fa-solid fa-scissors"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-flask"></i>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-link"></i>
+                                </div>
+                            </div>
+                            <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <div id="profile" class="collapse p-3">
+                                <p>Jules has been cutting hair for 10 years...</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
