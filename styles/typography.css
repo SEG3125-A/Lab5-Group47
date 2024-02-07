@@ -13,7 +13,7 @@ h2 {
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 p {
@@ -27,8 +27,3 @@ p {
 .services-table td{
     font-size: 20px;
 }
-
-.experts p{
-    font-size: 1.2rem;
-}
-

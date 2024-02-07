@@ -3,12 +3,15 @@
 .card {
     transform: scale(1);
     transition: transform 0.3s ease, filter 0.3s ease;
+    height: auto;
+    width: auto;
     
 }
 
 .col .card {
     background: #F1DABF;
     align-items: center;
+
 }
 
 .card img {
@@ -33,12 +36,21 @@
     text-align: center;
 }
 
+.title-container{
+    width: 150px;
+    height: 2rem;
+    background: #F1DABF;
+}
+
 .card-title {
-    margin-bottom: 0.5rem;
+    color: white;
+    margin-bottom: 0.1rem;
+    top: 50%;
+    left: 0%;
 }
 
 .card-text {
-    margin-bottom: 1rem;
+    margin-bottom: 0.1rem;
 }
 
 .icon-row{
