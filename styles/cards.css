@@ -7,7 +7,8 @@
 }
 
 .col .card {
-    background: #F1DABF;
+    /* background: #F1DABF; */
+    border: none;
     align-items: center;
 }
 
@@ -22,7 +23,8 @@
 .card:hover {
     transform: scale(1.1);
     z-index: 10;
-    border: 2px solid black;
+    /* border: 2px solid rgba(52, 58, 64, 1); */
+    border: none;
 }
 
 .card:hover img {

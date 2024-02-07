@@ -6,7 +6,7 @@
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
   font-family: "Times New Roman", Times, serif;
-  text-shadow: 3px 3px 1px black;
+  text-shadow: 3px 3px 1px rgba(52, 58, 64, 1);
 }
 
 .navbar {
@@ -65,7 +65,7 @@ h2, h4 {
 }
 
 .table .table-primary .table-bordered .table-hover .services-table{
-  border: 2px solid black;
+  border: 2px solid rgba(52, 58, 64, 1);
 }
 
 .service-icon{

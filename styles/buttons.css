@@ -2,5 +2,67 @@
 
 .hero-btn {
     margin-top: 10px;
+    background: rgba(52, 58, 64, 1);
+    color: white; 
+}
+
+.btn-primary {
+    background: rgba(52, 58, 64, 1);
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: rgba(52, 58, 64, 1);
+        border: none;
+        color: #F1DABF;
+    }
+
+    &:focus {
+        background: rgba(52, 58, 64, 1);
+        color: white;
+        border: none;
+        box-shadow: none;
+        &:hover {
+            color: #F1DABF;
+        }
+    }
+
+    &:not(:disabled):not(.disabled):active {
+        background: rgba(52, 58, 64, 1);
+        border: none;
+        color: #f5c893;
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.btn-info {
     background: #F1DABF;
+    color: rgba(52, 58, 64, 1);
+    border: none;
+
+    &:hover {
+        background-color: #f5c893;
+        border-color: rgba(52, 58, 64, 1);
+        color: rgba(52, 58, 64, 1);
+    }
+
+    &:focus {
+        background: #F1DABF;
+        color: rgba(52, 58, 64, 1);
+        border: none;
+        box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+        background-color: #f5c893;
+        border: none;
+        color: rgba(52, 58, 64, 1);
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+        }
+    }
 }
