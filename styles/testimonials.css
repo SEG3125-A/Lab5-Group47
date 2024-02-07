@@ -1,0 +1,69 @@
+/*testimonials.css*/
+
+.spacer {
+    height: 44px;
+}
+
+.carousel-item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#testimonials {
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
+.carousel-item.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial {
+    height: 480px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.main-review {
+    color: rgba(52, 58, 64, 1);
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.reviewer {
+    color: rgba(179, 179, 179, 1);
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.carousel-control-prev-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23B3B3B3' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23B3B3B3' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators li {
+    background-color: rgba(179, 179, 179, 1);
+}

@@ -1,5 +1,7 @@
 .experts{
     margin-bottom: 5rem;
+    max-height: 100vh; 
+    overflow-y: auto;
 }
 
 .experts-title{
