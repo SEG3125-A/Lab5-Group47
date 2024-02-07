@@ -12,6 +12,7 @@
 }
 
 .card img {
+    width:200px;
     border-radius: 5%;
     padding-top: 10px;
     filter: grayscale(100%);
