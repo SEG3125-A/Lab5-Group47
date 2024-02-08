@@ -1,0 +1,32 @@
+.portfolio-title{
+    display:flex;
+    text-align: justify;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.portfolio .card {
+    height: auto;
+    width: auto;
+}
+
+.portfolio .card p{
+    font-size: 1.25rem;
+    margin: 10px 0px 10px 0px;
+}
+
+.portfolio .col .card {
+    /* background: #F1DABF; */
+    border: none;
+    align-items: center;
+    border: 2px solid rgba(52, 58, 64, 1);
+
+}
+
+.portfolio .card img {
+    width:200px;
+    border-radius: 5%;
+    margin-top: 10px;
+    filter: grayscale(50%);
+}
+
