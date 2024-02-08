@@ -10,6 +10,11 @@
     width: auto;
 }
 
+.portfolio .card p{
+    font-size: 1.25rem;
+    margin: 10px 0px 10px 0px;
+}
+
 .portfolio .col .card {
     /* background: #F1DABF; */
     border: none;
