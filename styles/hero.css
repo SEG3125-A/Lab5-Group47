@@ -20,4 +20,8 @@
   align-items: center;
   justify-content: center;
   gap: 64px;
+
+    & p {
+        color: rgba(179, 179, 179, 1);
+    }
 }
