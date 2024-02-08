@@ -1,4 +1,27 @@
-.portfolio{
-    width: 150px;
+.portfolio-title{
+    display:flex;
+    text-align: justify;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.portfolio .card {
+    height: auto;
+    width: auto;
+}
+
+.portfolio .col .card {
+    /* background: #F1DABF; */
+    border: none;
+    align-items: center;
+    border: 2px solid rgba(52, 58, 64, 1);
+
+}
+
+.portfolio .card img {
+    width:200px;
+    border-radius: 5%;
+    margin-top: 10px;
+    filter: grayscale(50%);
 }
 
