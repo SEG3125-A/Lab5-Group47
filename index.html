@@ -17,7 +17,7 @@
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="icon" href="images/favicon.jpg">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'> 
@@ -36,6 +36,16 @@
     <link rel="stylesheet" href="styles/typography.css">
     <link rel="stylesheet" href="styles/testimonials.css">
     <link rel="stylesheet" href="styles/portfolio.css">
+
+    <script>
+        $(document).ready(function() {
+            $('#professional').change(function() {
+              var selectedImage = $(this).val();
+              $('#displayedImage').attr('src', 'images/' + selectedImage + '.png');
+            });
+          });
+    </script>
+
 </head>
 <body class="bg-white">
 
@@ -168,7 +178,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#secondModal">Next</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#professionalModal">Next</button>
                     </div>
                 </div>
         </div>
@@ -194,11 +204,40 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#thirdModal">Next</button>
+                    <button id="nextButton" type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#thirdModal">Next</button>
                 </div>
             </div>
         </div>
     </div>
+
+   <!-- Professional Modal -->
+    <div class="modal fade" id="professionalModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4>Choose Your Professional</h4>
+                    <div class="form-group">
+                        <select name="Professional" id="professional">
+                            <option id="jules" value="Jules">Jules</option>
+                            <option id="keith" value="Keith">Keith</option>
+                            <option id="luther" value="Luther">Luther</option>
+                            <option id="vanessa" value="Vanessa">Vanessa</option>
+                            <option id="pierre" value="Pierre">Pierre</option>
+                            <option id="arianna" value="Arianna"">Arianna</option>
+                        </select>
+                        <img id="displayedImage" src="images/Pierre.png" alt="Displayed Image">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="nextButton" type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#secondModal">Next</button>
+                </div>
+            </div>
+        </div>
+    </div> 
 
     <!-- Third Modal -->
     <div class="modal fade" id="thirdModal" role="dialog">
