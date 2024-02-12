@@ -269,11 +269,44 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Checkout</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#fourthModal">Checkout</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="fourthModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4>Please enter your credit card information:</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="creditCardNumber">Credit Card Number:</label>
+                            <input type="text" class="form-control" id="creditCardNumber" placeholder="Enter your credit card number">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date (MM/YYYY):</label>
+                            <input type="month" class="form-control" id="expiryDate" min="2024-01" max="2040-12">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Submit Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
     <!-- Card columns allows multiple cards next to each other -->
