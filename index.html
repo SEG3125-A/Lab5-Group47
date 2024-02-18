@@ -37,15 +37,6 @@
     <link rel="stylesheet" href="styles/testimonials.css">
     <link rel="stylesheet" href="styles/portfolio.css">
 
-    <script>
-        $(document).ready(function() {
-            $('#professional').change(function() {
-              var selectedImage = $(this).val();
-              $('#displayedImage').attr('src', 'images/' + selectedImage + '.png');
-            });
-          });
-    </script>
-
 </head>
 <body class="bg-white">
 
@@ -178,7 +169,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#professionalModal">Next</button>
+                        <button id="btnNext1" type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#professionalModal">Next</button>
                     </div>
                 </div>
         </div>
@@ -204,7 +195,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="nextButton" type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#thirdModal">Next</button>
+                    <button id="btnNext2" type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#thirdModal">Next</button>
                 </div>
             </div>
         </div>
@@ -227,13 +218,13 @@
                             <option id="luther" value="Luther">Luther</option>
                             <option id="vanessa" value="Vanessa">Vanessa</option>
                             <option id="pierre" value="Pierre">Pierre</option>
-                            <option id="arianna" value="Arianna"">Arianna</option>
+                            <option id="arianna" value="Arianna">Arianna</option>
                         </select>
                         <img id="displayedImage" src="images/Pierre.png" alt="Displayed Image">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="nextButton" type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#secondModal">Next</button>
+                    <button id="btnNext3" type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#secondModal">Next</button>
                 </div>
             </div>
         </div>
@@ -338,7 +329,7 @@
                                 </div>
                             </div>
                             
-                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <button id="book-Jules" type="button" class="book-now btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
                         </div>
                     </div>
                     <div class="col-lg-4 card">
@@ -359,7 +350,7 @@
                                 </div>
                             </div>
                             
-                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <button id="book-Keith" type="button" class="book-now btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
                         </div>
                     </div>
                     <div class="col-lg-4 card">
@@ -380,7 +371,7 @@
                                 </div>
                             </div>
                             
-                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <button id="book-Luther" type="button" class="book-now btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
                         </div>
                     </div>
                 </div>
@@ -403,7 +394,7 @@
                                 </div>
                             </div>
                             
-                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <button id="book-Vanessa" type="button" class="book-now btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
                             <div id="profile" class="collapse p-3">
                                 <p>Jules has been cutting hair for 10 years...</p>
                             </div>
@@ -427,7 +418,7 @@
                                 </div>
                             </div>
                             
-                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <button id="book-Pierre" type="button" class="book-now btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
                             <div id="profile" class="collapse p-3">
                                 <p>Jules has been cutting hair for 10 years...</p>
                             </div>
@@ -452,7 +443,7 @@
                                 </div>
                             </div>
                             
-                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
+                            <button id="book-Arianna" type="button" class="book-now btn btn-info btn-md" data-toggle="modal" data-target="#bookingModal">Book Now</button>
                         </div>
                     </div>
                 </div>
@@ -628,6 +619,8 @@
     <footer class="footer">
         123 Main Street, Ottawa ON, K2X 8G4
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
